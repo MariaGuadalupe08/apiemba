@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware'
+    
 ]
 
 ROOT_URLCONF = 'apiemba.urls'
@@ -89,7 +90,7 @@ DATABASES = {
         'NAME': 'kc27obyuy921i30n', 
         'USER': 'ius9mm7g1js9lm9a', 
         'PASSWORD': 'xabthwncj8334gjg', 
-        'HOST': 'd13xat1hwxt21t45.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', # o la URL de tu base de datos MySQL 
+        'HOST': 'd13xat1hwxt21t45.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', # URL de base de datos MySQL 
         'PORT': '3306',
     }
 }
@@ -138,3 +139,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 APPEND_SLASH = False
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserSerializer, UpdateUserSerializer, UserDetailSerializer
 from .models import CustomUser
+from rest_framework.views import APIView
 
 class RegisterView(generics.CreateAPIView):
     queryset = CustomUser.objects.all()
@@ -46,3 +47,13 @@ class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
         if self.request.method in ['PUT', 'PATCH']:
             return UpdateUserSerializer
         return UserDetailSerializer
+
+class UserIDView(APIView):
+
+    def get(self, request, username):
+        try:
+            user = CustomUser.objects.get(username=username)
+            serializer = UserDetailSerializer(user)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except CustomUser.DoesNotExist:
+            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
