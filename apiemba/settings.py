@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework', 
     'rest_framework_simplejwt', 
     'users',
+    'exercises'
 ]
 
 REST_FRAMEWORK = { 
@@ -140,3 +141,8 @@ AUTH_USER_MODEL = 'users.CustomUser'
 APPEND_SLASH = False
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
