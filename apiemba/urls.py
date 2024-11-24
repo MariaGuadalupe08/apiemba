@@ -12,6 +12,7 @@ urlpatterns = [
     path('api/', include('users.urls')),
     path('api/', include('exercises.urls')),
     path('api/', include('bebes.urls')),
+    path('api/', include('mami.urls')),
 ]
 
 if settings.DEBUG:

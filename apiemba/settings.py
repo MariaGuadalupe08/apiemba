@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'users',
     'exercises',
     'bebes',
+    'mami',
 ]
 
 REST_FRAMEWORK = { 
