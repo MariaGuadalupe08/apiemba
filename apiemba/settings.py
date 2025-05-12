@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'apiemba.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'kc27obyuy921i30n', 
-        'USER': 'ius9mm7g1js9lm9a', 
-        'PASSWORD': 'xabthwncj8334gjg', 
-        'HOST': 'd13xat1hwxt21t45.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', # URL de base de datos MySQL 
+        'NAME': 'rfjg63g1nqent1ku', 
+        'USER': 'xbiewbagz1spnm9n', 
+        'PASSWORD': 'x9srswovaw5q2ezt', 
+        'HOST': 'ipobfcpvprjpmdo9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', # URL de base de datos MySQL 
         'PORT': '3306',
     }
 }
